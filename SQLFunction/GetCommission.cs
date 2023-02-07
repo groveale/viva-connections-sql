@@ -38,8 +38,8 @@ namespace groverale
 
                 
                 // Return the result as an OkObjectResult with the SQLCommissionResponse object
-                return new OkObjectResult(new SQLCommissionResponse { Daily = dailyCommission, Weekly = weeklyCommission});
-                //return new OkObjectResult(SQLHelper.GetEmployeeCommission(userEmail, settings));
+                // Divide values by 10 to get pounds
+                return new OkObjectResult(new SQLCommissionResponse { Daily = dailyCommission / 100, Weekly = weeklyCommission / 100});
             }
             catch (Exception ex)
             {
@@ -52,7 +52,7 @@ namespace groverale
     // Define a class to store the response of the Azure Function
     public class SQLCommissionResponse
     {
-        // Properties to store the Daily and Weekly commission (£ GBP)
+        // Properties to store the Daily and Weekly commission
         public double Daily {get;set;}
         public double Weekly {get;set;}
     }

@@ -29,8 +29,7 @@ namespace groverale
                     Console.WriteLine($"{settings.ValueField}: {results[0]}");
                     
                     // We know that this type is an Int
-                    // divide by 100 to get pounds (db is stored in pence)
-                    return ((int)results[0] / 100);
+                    return (int)results[0];
                 }
 
                 return 0;
@@ -61,8 +60,7 @@ namespace groverale
                     Console.WriteLine($"commissionWeekly: {results[0]}");
                     
                     // We know that this type is an Int
-                    // divide by 100 to get pounds (db is stored in pence)
-                    return ((int)results[0] / 100);
+                    return (int)results[0];
                 }
 
                 return 0;
@@ -97,8 +95,8 @@ namespace groverale
                     // divide by 100 to get pounds (db is stored in pence)
                     return new SQLCommissionResponse 
                     {
-                        Daily = (int)results[0] / 100,
-                        Weekly = (int)results[1] / 100
+                        Daily = (int)results[0],
+                        Weekly = (int)results[1]
                     };
                 }
 
