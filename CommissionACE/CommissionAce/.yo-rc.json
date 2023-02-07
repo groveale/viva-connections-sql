@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "CommissionAce",
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "PrimaryText",
+    "componentName": "SQLCommission",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "14.15.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.4.1"
+    },
+    "version": "1.16.1",
+    "libraryName": "commission-ace",
+    "libraryId": "7928ae6a-cfe3-4f0a-86f8-23c03bc76c6f",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "CommissionAce description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

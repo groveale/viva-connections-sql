@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "sql-commission-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/sqlCommission/SqlCommissionAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/sqlCommission/SqlCommissionAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SqlCommissionAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/sqlCommission/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "commission-ace-client-side-solution",
+    "id": "7928ae6a-cfe3-4f0a-86f8-23c03bc76c6f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "CommissionAce description"
+      },
+      "longDescription": {
+        "default": "CommissionAce description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "commission-ace Feature",
+        "description": "The feature that activates elements of the commission-ace solution.",
+        "id": "d4796bff-d02f-4b83-bf51-6a48811012d1",
+        "version": "1.0.0.0"
+      }
+    ],
+    "webApiPermissionRequests": [
+      {
+        "resource": "ag-viva-connections-sqlapi",
+        "scope": "user_impersonation"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/commission-ace.sppkg"
+  }
+}
