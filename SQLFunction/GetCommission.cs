@@ -35,11 +35,17 @@ namespace groverale
                 // Get the commission for the user, daily and weekly
                 var dailyCommission = SQLHelper.GetEmployeeCommissionDaily(userEmail, settings);
                 var weeklyCommission = SQLHelper.GetEmployeeCommissionWeekly(userEmail, settings);
+                var leaderBoard = SQLHelper.GetStoreLeaderBoard(userEmail, settings);
 
                 
                 // Return the result as an OkObjectResult with the SQLCommissionResponse object
                 // Divide values by 10 to get pounds
-                return new OkObjectResult(new SQLCommissionResponse { Daily = dailyCommission / 100, Weekly = weeklyCommission / 100});
+                return new OkObjectResult(new SQLCommissionResponse 
+                { 
+                    Daily = Math.Round(dailyCommission / 100, 2), 
+                    Weekly = Math.Round(weeklyCommission / 100, 2),
+                    Leaderboard = leaderBoard.ToArray()
+                });
             }
             catch (Exception ex)
             {
@@ -55,5 +61,6 @@ namespace groverale
         // Properties to store the Daily and Weekly commission
         public double Daily {get;set;}
         public double Weekly {get;set;}
+        public LeaderboardUser[] Leaderboard {get;set;}
     }
 }

@@ -4,6 +4,7 @@ import { CardView } from './cardView/CardView';
 import { QuickView } from './quickView/QuickView';
 import { SqlCommissionPropertyPane } from './SqlCommissionPropertyPane';
 import { AadHttpClient } from '@microsoft/sp-http';
+import { LeaderboardItem } from './models/LeaderboardItem';
 
 export interface ISqlCommissionAdaptiveCardExtensionProps {
   title: string;
@@ -12,6 +13,7 @@ export interface ISqlCommissionAdaptiveCardExtensionProps {
 export interface ISqlCommissionAdaptiveCardExtensionState {
   daily: Number;
   weekly: Number;
+  leaderboard: LeaderboardItem[]
 }
 
 const CARD_VIEW_REGISTRY_ID: string = 'SqlCommission_CARD_VIEW';
@@ -26,7 +28,8 @@ export default class SqlCommissionAdaptiveCardExtension extends BaseAdaptiveCard
   public onInit(): Promise<void> {
     this.state = {
       daily: 0,
-      weekly: 0
+      weekly: 0,
+      leaderboard: []
     };
 
     this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
@@ -65,7 +68,8 @@ export default class SqlCommissionAdaptiveCardExtension extends BaseAdaptiveCard
       .then(commission => {
         this.setState({
           daily: commission.daily,
-          weekly: commission.weekly
+          weekly: commission.weekly,
+          leaderboard: commission.leaderboard
         });
       });
   }

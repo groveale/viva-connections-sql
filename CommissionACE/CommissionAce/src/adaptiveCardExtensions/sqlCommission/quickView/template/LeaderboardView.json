@@ -1,0 +1,77 @@
+{
+    "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Leaderboard",
+        "weight": "bolder",
+        "size": "large"
+      },
+      {
+        "type": "Container",
+        "$data": "${leaderboard}",
+        "items": [
+            {
+                "type": "ColumnSet",
+                "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Rank",
+                        "weight": "bolder"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "1"
+                    }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Username",
+                        "weight": "bolder"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "John Doe"
+                    }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Score",
+                        "weight": "bolder"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "100"
+                    }
+                    ]
+                }
+                ]
+            }
+        ]
+    }
+    ],
+    "actions": [
+      {
+        "type": "Action.OpenUrl",
+        "title": "View Leaderboard",
+        "url": "https://example.com/leaderboard"
+      }
+    ]
+  }
+  

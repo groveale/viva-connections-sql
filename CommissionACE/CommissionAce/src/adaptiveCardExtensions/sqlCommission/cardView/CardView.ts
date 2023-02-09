@@ -25,8 +25,8 @@ export class CardView extends BasePrimaryTextCardView<ISqlCommissionAdaptiveCard
 
   public get data(): IPrimaryTextCardParameters {
     return {
-      primaryText: `£ ${this.state.daily}`,
-      description: `You have earned £ ${this.state.weekly} sp far this week`,
+      primaryText: `£${this.state.daily} Today 💸`,
+      description: `You have earned:\n£${this.state.weekly} so far this week`,
       title: this.properties.title
     };
   }

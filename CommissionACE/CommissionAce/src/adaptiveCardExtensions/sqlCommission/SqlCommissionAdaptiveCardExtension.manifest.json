@@ -18,7 +18,7 @@
     "group": { "default": "Dashboard" },
     "title": { "default": "SQLCommission" },
     "description": { "default": "SQLCommission description" },
-    "officeFabricIconFontName": "SharePointLogo",
+    "officeFabricIconFontName": "Money",
     "properties": {
       "title": "SQLCommission"
     },
