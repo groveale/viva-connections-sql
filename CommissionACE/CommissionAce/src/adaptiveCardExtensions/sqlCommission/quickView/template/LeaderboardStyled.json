@@ -1,0 +1,134 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Container",
+            "style": "default",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "${storeName} Leaderboard",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "spacing": "Medium",
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "spacing": "Medium"
+        },
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 8
+                        },
+                        {
+                            "type": "Column",
+                            "width": 60,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Employee",
+                                    "wrap": true,
+                                    "size": "Small",
+                                    "weight": "Bolder"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 15,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Score",
+                                    "wrap": true,
+                                    "weight": "Bolder",
+                                    "size": "Small",
+                                    "horizontalAlignment": "Center"
+                                }
+                            ]
+                        }
+                    ],
+                    "spacing": "Medium",
+                    "isVisible": false
+                },
+                {
+                    "type": "Container",
+                    "$data": "${leaderboard}",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": 8,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "1",
+                                            "wrap": true,
+                                            "weight": "Bolder"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": 60,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${userEmail}",
+                                            "wrap": true,
+                                            "weight": "Bolder"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": 15,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${weekly} ",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "separator": true,
+                            "spacing": "Medium"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Read FAQ",
+                    "wrap": true,
+                    "color": "Accent",
+                    "horizontalAlignment": "Right"
+                }
+            ],
+            "spacing": "Medium",
+            "selectAction": {
+                "type": "Action.OpenUrl",
+                "url": "${faqsLink}"
+            },
+            "id": "url_faq"
+        }
+    ]
+  }

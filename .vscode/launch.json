@@ -6,6 +6,24 @@
             "type": "coreclr",
             "request": "attach",
             "processId": "${command:azureFunctions.pickProcess}"
-        }
+        },
+        {
+            "name": "Hosted workbench",
+            "type": "pwa-msedge",
+            "request": "launch",
+            "url": "https://groverale.sharepoint.com/sites/home/_layouts/workbench.aspx",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+              "webpack:///.././src/*": "${webRoot}/src/*",
+              "webpack:///../../../src/*": "${webRoot}/src/*",
+              "webpack:///../../../../src/*": "${webRoot}/src/*",
+              "webpack:///../../../../../src/*": "${webRoot}/src/*"
+            },
+            "runtimeArgs": [
+              "--remote-debugging-port=9222",
+              "-incognito"
+            ]
+          }
     ]
 }

@@ -10,6 +10,44 @@
         "size": "large"
       },
       {
+        "type": "ColumnSet",
+        "columns": [
+        {
+            "type": "Column",
+            "width": 8,
+            "items": [
+            {
+                "type": "TextBlock",
+                "text": "Rank",
+                "weight": "bolder"
+            }
+            ]
+        },
+        {
+            "type": "Column",
+            "width": 60,
+            "items": [
+            {
+                "type": "TextBlock",
+                "text": "Username",
+                "weight": "bolder"
+            }
+            ]
+        },
+        {
+            "type": "Column",
+            "width": 15,
+            "items": [
+            {
+                "type": "TextBlock",
+                "text": "Score",
+                "weight": "bolder"
+            }
+            ]
+        }
+        ]
+    },
+      {
         "type": "Container",
         "$data": "${leaderboard}",
         "items": [
@@ -18,13 +56,8 @@
                 "columns": [
                 {
                     "type": "Column",
-                    "width": "auto",
+                    "width": 8,
                     "items": [
-                    {
-                        "type": "TextBlock",
-                        "text": "Rank",
-                        "weight": "bolder"
-                    },
                     {
                         "type": "TextBlock",
                         "text": "1"
@@ -33,31 +66,21 @@
                 },
                 {
                     "type": "Column",
-                    "width": "stretch",
+                    "width": 60,
                     "items": [
                     {
                         "type": "TextBlock",
-                        "text": "Username",
-                        "weight": "bolder"
-                    },
-                    {
-                        "type": "TextBlock",
-                        "text": "John Doe"
+                        "text": "{userEmail}"
                     }
                     ]
                 },
                 {
                     "type": "Column",
-                    "width": "auto",
+                    "width": 15,
                     "items": [
                     {
                         "type": "TextBlock",
-                        "text": "Score",
-                        "weight": "bolder"
-                    },
-                    {
-                        "type": "TextBlock",
-                        "text": "100"
+                        "text": "{weekly}"
                     }
                     ]
                 }

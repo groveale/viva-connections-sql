@@ -6,7 +6,8 @@ import { ISqlCommissionAdaptiveCardExtensionProps, ISqlCommissionAdaptiveCardExt
 export interface IQuickViewData {
   subTitle: string;
   title: string;
-  leaderboard: LeaderboardItem[]
+  leaderboard: LeaderboardItem[],
+  storeName: string;
 }
 
 export class QuickView extends BaseAdaptiveCardView<
@@ -15,14 +16,18 @@ export class QuickView extends BaseAdaptiveCardView<
   IQuickViewData
 > {
   public get data(): IQuickViewData {
+
+
+    
     return {
       subTitle: strings.SubTitle,
       title: strings.Title,
-      leaderboard: this.state.leaderboard
+      leaderboard: this.state.leaderboard,
+      storeName: "London"
     };
   }
 
   public get template(): ISPFxAdaptiveCard {
-    return require('./template/LeaderboardView.json');
+    return require('./template/LeaderboardStyled.json');
   }
 }
