@@ -46,12 +46,35 @@ The GetEmployeeCommission method retrieves both the employee's commissionDaily a
 
 In all methods, the best practice of scoping the SqlConnection to a using block is followed to ensure that the connection is properly closed after use. Additionally, the methods return 0 if no data is found for the given employee.
 
-
 ## Deployment
 
-It is recommended to download and use [Azure Fruitions VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) to manage the deployment of the functions.
+The deployment can
 
-Once you have the downloaded the repo. I would suggest you first create an function app using the Azure Portal. It is also possible to create it from the VSCode extension.
+## PreReqs
+
+* [M365 Developer Tenant](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-get-started)
+* Azure Subscription (can be a free sub)
+* Download and install [VSCode](https://code.visualstudio.com) (or another IDE will do, but this guide will focus on VSCode)
+* [dotnet 6.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+    * ![dotnet version](./res/dotnetcore.png)
+* [SPFx development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
+    * Node.js 16
+    * ![node version](./res/node.png)
+    * Gulp task runner to continually build the project 
+    * ![gulp](./res/gulp.png)
+    * Yeoman scaffolding tool and the SharePoint Framework Yeoman generator
+    * ![yo](./res/yo.png)
+* [Azure Functions VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). This helps streamline the creation and deployment of Azure Functions
+    * This should also install [Azure Functions Core Tools](https://www.npmjs.com/package/azure-functions-core-tools). This will allow you to test and debug Azure functions locally
+    * ![func version](./res/func.png)
+* [Viva Connections Toolkit VSCode extension](https://marketplace.visualstudio.com/items?itemName=m365pnp.viva-connections-toolkit). This helps streamline the creation of Viva Connections projects and provides a UI for running gulp tasks for building and packaging your solution.
+* Other useful extensions for this projects
+    * [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) - This will provide syntax highlighting and intellisense for working with the Azure Function 
+* An accessible SQL database 
+    * The database and table used in this sample are as follows:
+    * ![SQL Table](./res/sqltable.png)
+
+Once you have the downloaded the repo. I would suggest you first create an function app using the VSCode Extension.
 
 Once the function app has been provisioned there are a number of app configuration settings to configure before deploying the code:
 
