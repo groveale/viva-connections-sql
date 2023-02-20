@@ -37,23 +37,23 @@ This a list of the prereqs required to both build and deploy the solutions
 * Azure Subscription (can be a free sub) to deploy the Azure Function to
 * Download and install [VSCode](https://code.visualstudio.com) (or another IDE will do, but this guide will focus on VSCode). This will be used to compile and deploy both solutions
 * [dotnet 6.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) to compile the function code
-    * ![dotnet version](./res/dotnetcore.png)
+    ![dotnet version](./res/dotnetcore.png)
 * [SPFx development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment) to compile and build the ACE package
     * Node.js 16
-    * ![node version](./res/node.png)
+  ![node version](./res/node.png)
     * Gulp task runner to continually build the project 
-    * ![gulp](./res/gulp.png)
+  ![gulp](./res/gulp.png)
     * Yeoman scaffolding tool and the SharePoint Framework Yeoman generator. Not actually needed, but required to create new Viva Connections projects
-    * ![yo](./res/yo.png)
+ ![yo](./res/yo.png)
 * [Azure Functions VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). This helps streamline the creation and deployment of Azure Functions
     * This should also install [Azure Functions Core Tools](https://www.npmjs.com/package/azure-functions-core-tools). This will allow you to test and debug Azure functions locally
-    * ![func version](./res/func.png)
+![func version](./res/func.png)
 * [Viva Connections Toolkit VSCode extension](https://marketplace.visualstudio.com/items?itemName=m365pnp.viva-connections-toolkit). This helps streamline the creation of Viva Connections projects and provides a UI for running gulp tasks for building and packaging your solution.
 * Other useful extensions for this projects
     * [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) - This will provide syntax highlighting and intellisense for working with the Azure Function 
 * An accessible SQL database 
     * The database and table used in this sample are as follows:
-    * ![SQL Table](./res/sqltable.png)
+    ![SQL Table](./res/sqltable.png)
 * [Postman](https://www.postman.com/downloads/) for API testing
 
 If you have all the above then you are good to proceed. 
